@@ -1,0 +1,73 @@
+.same{
+    width: 50%;
+    margin: 0px auto;
+    
+}
+.goToSignIn{
+    width: 50%;
+    margin: 0px auto;
+}
+.alreadyAccount{
+    display: none;
+    
+}
+.wrongInfo{
+    display: none;
+    
+}
+.suh{
+    margin: 15% auto 2% auto;
+    
+}
+.but{
+    margin: 1% auto 1% auto;
+}
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    background:#6cf;
+ }
+ .grid{
+     margin: 2% 0% 0% 0%;
+ }
+.cardstyling{
+    margin: 0% 0% 2% 0%;
+} 
+.validate{
+    max-height: 300px;
+    max-width: 300px;
+    overflow: scroll;
+}
+.activeUser{
+    display: none;
+}
+#postad{
+    display: none;
+}
+#greetUser{
+    display: none;
+}
+#search{
+     
+    height: 70%;
+}
+#searchBtn{
+    display: none;
+}
+.userProfile{
+    display: none;
+}
+.userAds{
+    display: none;
+}
+.category{
+    color: gray;
+}
+.favourite{
+    display: none;
+}
+.text-messages{
+    color: gray;
+}

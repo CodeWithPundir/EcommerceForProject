@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SIGN IN</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" href="images/OLX-Logo.png" type="icon" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+</head>
+<body>
+   <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Buy & Sell</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item active " >
+            <a class="nav-link" href="#" id="greetUser"></a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" class="userProfile" href="User Profile.html" id="userProfile"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="postad" href="submitad.html">Post An Ad</a>
+              </li>                
+            <li class="nav-item active" id="inActiveUser">
+              <a class="nav-link" href="signin.html">Sign In/Register</a>
+            </li>
+            <li class="activeUser nav-item" id="activeUser">
+              <a class="nav-link" href="index.html" onclick="signOut()">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="container">
+    <h1 class="suh text-center text-dark">SIGN IN</h1>
+    <form id="signInForm" class="same">
+      <div class="form-group">
+        <label for="email"><b>Email address</b></label>
+        <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="password"><b>Password</b></label>
+        <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="signIn()">Sign In</button>    
+    </form>
+    <div class="goToSignIn">
+      <small>Don't Have An Account ?</small><br>
+      <button type="button" class="btn btn-info" onclick="goToSignUp()">Sign Up</button>
+    </div><br>
+    <div class="alert alert-danger wrongInfo" id="wrongInfo" role="alert" ></div>
+    <div class="alert alert-success wrongInfo" id="signInSuccessfull" role="alert" ></div>      
+  </div>
+
+          <!-- Footer -->
+  <footer id="" class="py-5 bg-dark">
+      <div class="container">
+          <div class="container">
+              <address style="color:#f0f5f5;font-family:Times New Roman;Text-Align:center">
+                      Website Owner : Buy & Sell<sup>©</sup><br>
+                    Cell No.      : 9634871921<br>
+                    Facebook      : <a href="#">Find Us On Facebook</a><br>
+                    Twitter       : <a href="#">Find Us On Twitter</a><br>
+                    Github       :  <a href="#">Find Us On Github</a><br>
+                      </address>
+      </div>
+      <!-- /.container -->
+  </footer>
+    
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCzPEhkUwgTiJu2pS69ao7YdnHu-0oVn3Q",
+    authDomain: "olx-pakistan-8800e.firebaseapp.com",
+    databaseURL: "https://olx-pakistan-8800e.firebaseio.com",
+    projectId: "olx-pakistan-8800e",
+    storageBucket: "gs://olx-pakistan-8800e.appspot.com",
+    messagingSenderId: "441355874801"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="signup.js"></script>
+    <script src="signin.js"></script>
+    <!-- <script src="submitad.js"></script> -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

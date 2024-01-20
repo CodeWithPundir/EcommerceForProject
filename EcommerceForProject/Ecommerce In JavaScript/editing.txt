@@ -1,0 +1,78 @@
+    <div class="col">
+      <div class="row-lg-4 row-md-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="images/OLX-Logo.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title text-info">
+              <a href="#" class="text-info">anything</a>
+            </h4>
+            <h5>Rs.2,886,000</h5>
+            <p class="card-text">Payment Plan:</p>
+          </div>
+        <div class="card-footer">
+          <!-- <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> -->
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <img class="card-img-top" id="fetchImage" src=""/>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" id="fetchTitle">Title</a>
+            </h4>
+            <p id="fetchDescription" class="card-text">Description</p>
+            <h5 id="fetchPrice">Price</h5>
+            <button type="button" class="btn btn-primary" onclick="sendMessage()">Message</button>
+          </div>
+        </div>
+      </div>
+
+var rowDiv = document.getElementById("row");
+var colDiv = document.createElement("div");
+colDiv.setAttribute("class","col-lg-4 col-sm-6 portfolio-item");
+var cardDiv = document.createElement("div");
+cardDiv.setAttribute("class","card h-100");
+var imgTag = document.createElement("img");
+imgTag.setAttribute("class","card-img-top");
+imgTag.setAttribute("id","fetchImage");
+var cardBody = document.createElement("div");
+cardBody.setAttribute("class","card-body");
+var h4 = document.createElement("h4");
+h4.setAttribute("class","card-title");
+h4.setAttribute("id","fetchTitle");
+var description = document.createElement("p");
+description.setAttribute("class","card-text");
+description.setAttribute("id","fetchDescription");
+var h5 = document.createElement("h5");
+h5.setAttribute("id","fetchPrice");
+var button = document.createElement("button");
+button.setAttribute("class","btn btn-primary");
+button.setAttribute("type","button");
+button.setAttribute("onClick","sendMessage()");
+button.appendChild(document.createTextNode("Message"));
+
+
+   rowDiv.appendChild(colDiv);
+   colDiv.appendChild(cardDiv);
+   cardDiv.appendChild(imgTag);
+   cardDiv.appendChild(cardBody);
+   cardBody.appendChild(h4);
+   cardBody.appendChild(description);
+   cardBody.appendChild(h5);
+   cardBody.appendChild(button);
+
+     //   function fetchFavourites(){
+    
+  //   var favouritesRef = database.ref('favourites/' + firebase.auth().currentUser.uid);
+  //   favouritesRef.on('child_added', function (data) {
+  //     // console.log(data.val());
+  //     adCard(data.val(), data.key);
+  //     document.getElementById("row").innerHTML += adCard(data.val(), data.key);
+      
+  //   });
+  // }
+
+  ('${key}',this)
